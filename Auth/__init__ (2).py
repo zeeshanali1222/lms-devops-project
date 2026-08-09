@@ -1,0 +1,26 @@
+name: Auth Microservice CI
+
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        working-directory: auth_microservice
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        working-directory: auth_microservice
+        run: pytest tests/ -v
