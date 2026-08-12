@@ -2,7 +2,7 @@
 library.py - Group C: Library Module
 
 Purpose: Manage the library's book collection.
-Responsibilities: Add, remove, and list books.
+Responsibilities: Add, remove, update, and list books.
 """
 
 
