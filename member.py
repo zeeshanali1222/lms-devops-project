@@ -3,7 +3,6 @@ member.py - Group B: Member Module
 
 Purpose: Manage library members.
 Responsibilities: Track member ID, name, and borrowed books.
-new line added
 """
 
 
